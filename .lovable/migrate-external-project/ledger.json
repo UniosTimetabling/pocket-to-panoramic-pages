@@ -5,8 +5,8 @@
       "capability": "application code and pages",
       "source": "dravtech_fintech.zip",
       "outcome": "migrate",
-      "status": "migrated",
-      "next_action": "Verify the existing DravTech pages and their responsive layouts."
+      "status": "verified",
+      "next_action": "None; all nine pages respond at the tested phone, tablet, and desktop widths."
     },
     {
       "capability": "database schema and records",
@@ -33,22 +33,22 @@
       "capability": "uploaded media",
       "source": "dravtech_fintech.zip",
       "outcome": "preserve",
-      "status": "migrated",
-      "next_action": "Verify the existing cooperative finance image displays in the preview."
+      "status": "verified",
+      "next_action": "None; the existing cooperative finance image loads in the preview."
     },
     {
       "capability": "responsive behavior",
       "source": "user request",
       "outcome": "implement",
-      "status": "implemented",
-      "next_action": "Verify all pages at phone, tablet, and desktop widths."
+      "status": "verified",
+      "next_action": "None; all nine pages were checked at seven widths from 320 to 1440 pixels."
     },
     {
       "capability": "verification",
       "source": "target preview",
       "outcome": "verify",
-      "status": "pending",
-      "next_action": "Check the live preview at representative viewport sizes and run routing tests."
+      "status": "verified",
+      "next_action": "None; page layout, mobile navigation, image loading, browser errors, and the routing test were checked."
     }
   ]
 }
