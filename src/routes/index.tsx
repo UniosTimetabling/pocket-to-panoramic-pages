@@ -4,10 +4,10 @@ import { HomePage } from "@/components/site";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "DravTech Fintech | Financial connectivity for East Africa" },
-      { name: "description", content: "DravTech Fintech is building financial connectivity for SACCOs, banks, mobile money networks, and merchants across East Africa." },
-      { property: "og:title", content: "DravTech Fintech | Financial connectivity for East Africa" },
-      { property: "og:description", content: "A proposed financial switch connecting institutions and payment networks across East Africa." },
+      { title: "DRAVPAY | One connection for collections and payouts" },
+      { name: "description", content: "DRAVPAY is planning payment collections, wallet services, SACCO transfers, and payouts to mobile money, banks, cards, and digital assets." },
+      { property: "og:title", content: "DRAVPAY | One connection for collections and payouts" },
+      { property: "og:description", content: "A planned payment and wallet network for websites, organizations, SACCOs, and financial partners." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

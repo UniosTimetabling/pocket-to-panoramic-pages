@@ -4,10 +4,10 @@ import { DevelopersOverviewPage } from "@/components/developer-docs";
 export const Route = createFileRoute("/developers/")({
   head: () => ({
     meta: [
-      { title: "Developer Overview | DravTech Fintech" },
-      { name: "description", content: "Explore draft developer notes for the proposed DravTech financial switch and partner integrations." },
-      { property: "og:title", content: "Developer Overview | DravTech Fintech" },
-      { property: "og:description", content: "Technical planning material for institutions exploring a future DravTech connection." },
+      { title: "DRAVPAY Developer Overview" },
+      { name: "description", content: "Explore draft developer notes for DRAVPAY payment collection, wallet, transfer, and payout integrations." },
+      { property: "og:title", content: "DRAVPAY Developer Overview" },
+      { property: "og:description", content: "Technical planning material for websites, organizations, and institutions exploring DRAVPAY integrations." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

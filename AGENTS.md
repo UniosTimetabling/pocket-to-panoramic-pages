@@ -30,4 +30,4 @@ use the editor.
 <!-- LOVABLE:END -->
 
 ## Project architecture
-- Keep DravTech pages in TanStack file routes and shared site/documentation modules so navigation and screen-size fixes remain consistent.
+- Keep DRAVPAY pages in TanStack file routes and shared site/documentation modules so navigation and screen-size fixes remain consistent.
