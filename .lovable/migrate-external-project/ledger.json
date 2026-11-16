@@ -33,15 +33,15 @@
       "capability": "uploaded media",
       "source": "dravtech_fintech.zip",
       "outcome": "preserve",
-      "status": "pending",
-      "next_action": "Preserve the existing cooperative finance image and verify it displays."
+      "status": "migrated",
+      "next_action": "Verify the existing cooperative finance image displays in the preview."
     },
     {
       "capability": "responsive behavior",
       "source": "user request",
       "outcome": "implement",
-      "status": "pending",
-      "next_action": "Check and correct the pages at phone, tablet, and desktop widths."
+      "status": "implemented",
+      "next_action": "Verify all pages at phone, tablet, and desktop widths."
     },
     {
       "capability": "verification",

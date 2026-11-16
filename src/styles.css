@@ -174,6 +174,8 @@
   html { scroll-behavior: smooth; }
 
   body {
+    min-width: 320px;
+    overflow-x: clip;
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: "IBM Plex Sans", sans-serif;
@@ -199,6 +201,7 @@
 }
 
 .hero-image { object-position: 58% 48%; }
+.hero-visual { background: color-mix(in oklab, var(--color-background) 82%, transparent); }
 .eyebrow { color: var(--color-signal); font-size: 0.75rem; font-style: normal; font-weight: 700; letter-spacing: 0; text-transform: uppercase; }
 .display-title { font-family: "IBM Plex Sans", sans-serif; font-weight: 600; line-height: 1.05; }
 .reference-stripes { display: flex; width: 5rem; height: 0.3rem; overflow: hidden; border-radius: 0; }
@@ -216,6 +219,17 @@
 .network-ring:nth-child(2) { inset: 14%; transform: rotateY(68deg) rotateZ(18deg); animation-duration: 24s; animation-direction: reverse; border-color: color-mix(in oklab, var(--color-gold) 76%, transparent); }
 .network-ring:nth-child(3) { inset: 22%; transform: rotateX(75deg) rotateY(22deg); animation-duration: 14s; }
 .network-core { transform: translateZ(32px); box-shadow: 0 18px 40px color-mix(in oklab, var(--color-signal) 26%, transparent); }
+
+@media (max-width: 639px) {
+  .hero-image { object-position: 62% center; }
+  .hero-visual { background: color-mix(in oklab, var(--color-background) 88%, transparent); }
+  .reference-stripes { width: 3rem; flex: 0 0 3rem; }
+  .network-orbit { animation: none; }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .hero-visual { background: color-mix(in oklab, var(--color-background) 78%, transparent); }
+}
 @supports (animation-timeline: view()) {
   .scroll-flow > section {
     animation: section-arrive both;
