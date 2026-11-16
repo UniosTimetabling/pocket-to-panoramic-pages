@@ -225,6 +225,28 @@
   .hero-visual { background: color-mix(in oklab, var(--color-background) 88%, transparent); }
   .reference-stripes { width: 3rem; flex: 0 0 3rem; }
   .network-orbit { animation: none; }
+
+  .api-table,
+  .api-table tbody,
+  .api-table tr,
+  .api-table td {
+    display: block;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .api-table thead { display: none; }
+  .api-table tbody tr { padding-block: 0.75rem; }
+  .api-table td { padding: 0.25rem 0; }
+  .api-table td::before {
+    display: block;
+    margin-bottom: 0.125rem;
+    color: var(--color-muted-foreground);
+    content: attr(data-label);
+    font-size: 0.625rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
 }
 
 @media (min-width: 640px) and (max-width: 1023px) {
