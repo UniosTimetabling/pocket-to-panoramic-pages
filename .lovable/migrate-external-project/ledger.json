@@ -1,0 +1,54 @@
+{
+  "source": "code archive",
+  "capabilities": [
+    {
+      "capability": "application code and pages",
+      "source": "dravtech_fintech.zip",
+      "outcome": "migrate",
+      "status": "verified",
+      "next_action": "None; all nine pages respond at the tested phone, tablet, and desktop widths."
+    },
+    {
+      "capability": "database schema and records",
+      "source": "none detected in archive",
+      "outcome": "not_present",
+      "status": "verified",
+      "next_action": "None; this archive contains no database schema or record exports."
+    },
+    {
+      "capability": "authentication and authorization",
+      "source": "none detected in archive",
+      "outcome": "not_present",
+      "status": "verified",
+      "next_action": "None; no sign-in or role system was detected."
+    },
+    {
+      "capability": "external providers and public integrations",
+      "source": "none detected in archive",
+      "outcome": "not_present",
+      "status": "verified",
+      "next_action": "None detected in application source."
+    },
+    {
+      "capability": "uploaded media",
+      "source": "dravtech_fintech.zip",
+      "outcome": "preserve",
+      "status": "verified",
+      "next_action": "None; the existing cooperative finance image loads in the preview."
+    },
+    {
+      "capability": "responsive behavior",
+      "source": "user request",
+      "outcome": "implement",
+      "status": "verified",
+      "next_action": "None; all nine pages were checked at seven widths from 320 to 1440 pixels."
+    },
+    {
+      "capability": "verification",
+      "source": "target preview",
+      "outcome": "verify",
+      "status": "verified",
+      "next_action": "None; page layout, mobile navigation, image loading, browser errors, and the routing test were checked."
+    }
+  ]
+}

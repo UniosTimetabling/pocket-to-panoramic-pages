@@ -28,3 +28,6 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project architecture
+- Keep DravTech pages in TanStack file routes and shared site/documentation modules so navigation and screen-size fixes remain consistent.
