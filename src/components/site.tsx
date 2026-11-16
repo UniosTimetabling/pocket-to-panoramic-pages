@@ -72,7 +72,7 @@ export function HomePage() {
   ];
   return <SiteFrame>
     <section className="relative isolate min-h-[680px] overflow-hidden border-b border-border md:min-h-[720px]">
-      <img src={cooperativePhoto} alt="Cooperative finance professionals working together in a bright office" width={1536} height={1024} fetchPriority="high" className="hero-image absolute inset-0 -z-20 size-full object-cover" />
+      <img src={cooperativePhoto.url} alt="Cooperative finance professionals working together in a bright office" width={1536} height={1024} fetchPriority="high" className="hero-image absolute inset-0 -z-20 size-full object-cover" />
       <div className="hero-visual absolute inset-0 -z-10" />
       <div className="mx-auto flex min-h-[680px] max-w-7xl items-center px-5 py-16 md:min-h-[720px] md:px-8">
         <div className="fade-up w-full max-w-[650px] min-w-0">
