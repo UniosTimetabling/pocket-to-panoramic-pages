@@ -10,33 +10,141 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as IntegrationsRouteImport } from './routes/integrations'
+import { Route as PlatformRouteImport } from './routes/platform'
+import { Route as SecurityRouteImport } from './routes/security'
+import { Route as DevelopersIndexRouteImport } from './routes/developers.index'
+import { Route as DevelopersApiRouteImport } from './routes/developers.api'
+import { Route as DevelopersQuickstartRouteImport } from './routes/developers.quickstart'
+import { Route as DevelopersWebhooksRouteImport } from './routes/developers.webhooks'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IntegrationsRoute = IntegrationsRouteImport.update({
+  id: '/integrations',
+  path: '/integrations',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlatformRoute = PlatformRouteImport.update({
+  id: '/platform',
+  path: '/platform',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SecurityRoute = SecurityRouteImport.update({
+  id: '/security',
+  path: '/security',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DevelopersIndexRoute = DevelopersIndexRouteImport.update({
+  id: '/developers/',
+  path: '/developers/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DevelopersApiRoute = DevelopersApiRouteImport.update({
+  id: '/developers/api',
+  path: '/developers/api',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DevelopersQuickstartRoute = DevelopersQuickstartRouteImport.update({
+  id: '/developers/quickstart',
+  path: '/developers/quickstart',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DevelopersWebhooksRoute = DevelopersWebhooksRouteImport.update({
+  id: '/developers/webhooks',
+  path: '/developers/webhooks',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
+  '/integrations': typeof IntegrationsRoute
+  '/platform': typeof PlatformRoute
+  '/security': typeof SecurityRoute
+  '/developers/api': typeof DevelopersApiRoute
+  '/developers/quickstart': typeof DevelopersQuickstartRoute
+  '/developers/webhooks': typeof DevelopersWebhooksRoute
+  '/developers/': typeof DevelopersIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
+  '/integrations': typeof IntegrationsRoute
+  '/platform': typeof PlatformRoute
+  '/security': typeof SecurityRoute
+  '/developers/api': typeof DevelopersApiRoute
+  '/developers/quickstart': typeof DevelopersQuickstartRoute
+  '/developers/webhooks': typeof DevelopersWebhooksRoute
+  '/developers': typeof DevelopersIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
+  '/integrations': typeof IntegrationsRoute
+  '/platform': typeof PlatformRoute
+  '/security': typeof SecurityRoute
+  '/developers/api': typeof DevelopersApiRoute
+  '/developers/quickstart': typeof DevelopersQuickstartRoute
+  '/developers/webhooks': typeof DevelopersWebhooksRoute
+  '/developers/': typeof DevelopersIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/contact'
+    | '/integrations'
+    | '/platform'
+    | '/security'
+    | '/developers/api'
+    | '/developers/quickstart'
+    | '/developers/webhooks'
+    | '/developers/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/contact'
+    | '/integrations'
+    | '/platform'
+    | '/security'
+    | '/developers/api'
+    | '/developers/quickstart'
+    | '/developers/webhooks'
+    | '/developers'
+  id:
+    | '__root__'
+    | '/'
+    | '/contact'
+    | '/integrations'
+    | '/platform'
+    | '/security'
+    | '/developers/api'
+    | '/developers/quickstart'
+    | '/developers/webhooks'
+    | '/developers/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ContactRoute: typeof ContactRoute
+  IntegrationsRoute: typeof IntegrationsRoute
+  PlatformRoute: typeof PlatformRoute
+  SecurityRoute: typeof SecurityRoute
+  DevelopersApiRoute: typeof DevelopersApiRoute
+  DevelopersQuickstartRoute: typeof DevelopersQuickstartRoute
+  DevelopersWebhooksRoute: typeof DevelopersWebhooksRoute
+  DevelopersIndexRoute: typeof DevelopersIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +156,75 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/integrations': {
+      id: '/integrations'
+      path: '/integrations'
+      fullPath: '/integrations'
+      preLoaderRoute: typeof IntegrationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/platform': {
+      id: '/platform'
+      path: '/platform'
+      fullPath: '/platform'
+      preLoaderRoute: typeof PlatformRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/security': {
+      id: '/security'
+      path: '/security'
+      fullPath: '/security'
+      preLoaderRoute: typeof SecurityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/developers/': {
+      id: '/developers/'
+      path: '/developers'
+      fullPath: '/developers/'
+      preLoaderRoute: typeof DevelopersIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/developers/api': {
+      id: '/developers/api'
+      path: '/developers/api'
+      fullPath: '/developers/api'
+      preLoaderRoute: typeof DevelopersApiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/developers/quickstart': {
+      id: '/developers/quickstart'
+      path: '/developers/quickstart'
+      fullPath: '/developers/quickstart'
+      preLoaderRoute: typeof DevelopersQuickstartRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/developers/webhooks': {
+      id: '/developers/webhooks'
+      path: '/developers/webhooks'
+      fullPath: '/developers/webhooks'
+      preLoaderRoute: typeof DevelopersWebhooksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ContactRoute: ContactRoute,
+  IntegrationsRoute: IntegrationsRoute,
+  PlatformRoute: PlatformRoute,
+  SecurityRoute: SecurityRoute,
+  DevelopersApiRoute: DevelopersApiRoute,
+  DevelopersQuickstartRoute: DevelopersQuickstartRoute,
+  DevelopersWebhooksRoute: DevelopersWebhooksRoute,
+  DevelopersIndexRoute: DevelopersIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
