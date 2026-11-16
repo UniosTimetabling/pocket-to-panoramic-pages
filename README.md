@@ -1,14 +1,18 @@
-# Welcome to your Lovable project
+# Pocket To Panoramic Pages
+
+let ensure the site is mobile responsive all sections coz now some are broken and some cards also all screens enusre itis responsive
 
 This project was built with [Lovable](https://lovable.dev).
 
+**Live app**: https://pocket-to-panoramic-pages.lovable.app
+
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/40166d09-ad1f-4f29-952f-275e4f93dc74).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +24,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
