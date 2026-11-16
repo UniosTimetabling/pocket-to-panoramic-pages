@@ -27,21 +27,21 @@ function DocsFrame({
   return (
     <SiteFrame>
       <div className="mx-auto max-w-7xl px-5 pb-20 pt-12 md:px-8 md:pt-16">
-        <div className="mb-10 border-b border-border pb-8">
+        <div className="mb-8 border-b border-border pb-7 sm:mb-10 sm:pb-8">
           <p className="eyebrow mb-3">Developer resources / {eyebrow}</p>
-          <div className="flex flex-wrap items-start justify-between gap-5">
-            <div className="max-w-3xl">
-              <h1 className="display-title text-4xl text-foreground md:text-6xl">{title}</h1>
-              <p className="mt-5 max-w-2xl leading-7 text-muted-foreground">{intro}</p>
+          <div className="grid min-w-0 gap-5 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-start">
+            <div className="min-w-0 max-w-3xl">
+              <h1 className="display-title text-3xl text-foreground sm:text-4xl md:text-6xl">{title}</h1>
+              <p className="mt-5 max-w-2xl text-sm leading-7 text-muted-foreground sm:text-base">{intro}</p>
             </div>
-            <span className="inline-flex shrink-0 items-center gap-2 border border-amber/60 bg-amber/20 px-3 py-2 text-xs font-semibold text-accent-foreground">
+            <span className="inline-flex w-fit max-w-full items-center gap-2 border border-amber/60 bg-amber/20 px-3 py-2 text-xs font-semibold text-accent-foreground">
               <CircleAlert className="size-4" /> Draft documentation
             </span>
           </div>
         </div>
 
-        <div className="grid gap-10 lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-16">
-          <nav aria-label="Developer documentation" className="flex gap-2 overflow-x-auto border-b border-border pb-3 lg:sticky lg:top-24 lg:block lg:h-fit lg:overflow-visible lg:border-b-0 lg:border-r lg:pb-0 lg:pr-6">
+        <div className="grid min-w-0 gap-7 sm:gap-10 lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-16">
+          <nav aria-label="Developer documentation" className="flex min-w-0 gap-2 overflow-x-auto border-b border-border pb-3 lg:sticky lg:top-24 lg:block lg:h-fit lg:overflow-visible lg:border-b-0 lg:border-r lg:pb-0 lg:pr-6">
             <p className="mb-3 hidden text-xs font-semibold uppercase text-muted-foreground lg:block">Documentation</p>
             {docsNavigation.map((item) => (
               <Link
@@ -59,7 +59,7 @@ function DocsFrame({
           </nav>
 
           <article className="min-w-0 max-w-4xl">
-            <div className="mb-9 flex gap-4 border-l-2 border-amber bg-amber/15 px-5 py-4 text-sm leading-6 text-muted-foreground">
+            <div className="mb-8 flex min-w-0 gap-3 border-l-2 border-amber bg-amber/15 px-4 py-4 text-sm leading-6 text-muted-foreground sm:mb-9 sm:gap-4 sm:px-5">
               <CircleAlert className="mt-0.5 size-4 shrink-0 text-accent-foreground" />
               <p><strong className="text-foreground">Planning material only.</strong> These examples are based on a proposed architecture. API access, endpoints, credentials, sandbox, partner connections, and production availability have not been confirmed.</p>
             </div>
@@ -74,7 +74,7 @@ function DocsFrame({
 function DocSection({ title, children }: { title: string; children: ReactNode }) {
   return (
     <section className="mb-11 border-t border-border pt-6">
-      <h2 className="display-title text-3xl text-foreground">{title}</h2>
+      <h2 className="display-title text-2xl text-foreground sm:text-3xl">{title}</h2>
       <div className="mt-4 space-y-4 text-sm leading-7 text-muted-foreground">{children}</div>
     </section>
   );
@@ -83,10 +83,10 @@ function DocSection({ title, children }: { title: string; children: ReactNode })
 function CodeExample({ label, children }: { label: string; children: string }) {
   return (
     <div className="my-5 min-w-0">
-      <div className="flex items-center gap-2 border border-border border-b-0 bg-muted px-4 py-2 text-xs font-semibold text-muted-foreground">
-        <FileCode2 className="size-4" /> {label}
+      <div className="flex min-w-0 items-center gap-2 border border-border border-b-0 bg-muted px-3 py-2 text-xs font-semibold text-muted-foreground sm:px-4">
+        <FileCode2 className="size-4 shrink-0" /> <span className="min-w-0 break-words">{label}</span>
       </div>
-      <pre className="code-panel overflow-x-auto border border-border p-4 text-xs leading-6"><code>{children}</code></pre>
+      <pre className="code-panel max-w-full overflow-x-auto border border-border p-3 text-[11px] leading-6 sm:p-4 sm:text-xs"><code>{children}</code></pre>
     </div>
   );
 }
@@ -176,10 +176,10 @@ export function ApiReferencePage() {
       </DocSection>
       {endpointGroups.map((group) => (
         <DocSection key={group.title} title={group.title}>
-          <div className="overflow-x-auto border-y border-border">
-            <table className="w-full min-w-[560px] text-left text-sm">
-              <thead><tr className="border-b border-border text-xs uppercase text-muted-foreground"><th className="py-3 pr-4 font-semibold">Method</th><th className="py-3 pr-4 font-semibold">Proposed path</th><th className="py-3 font-semibold">Intent in draft</th></tr></thead>
-              <tbody>{group.items.map(([method, path, intent]) => <tr key={path} className="border-b border-border last:border-0"><td className="py-3 pr-4 text-xs font-semibold text-primary">{method}</td><td className="py-3 pr-4 text-xs text-foreground">{path}</td><td className="py-3 text-muted-foreground">{intent}</td></tr>)}</tbody>
+          <div className="max-w-full overflow-x-auto border-y border-border">
+            <table className="w-full min-w-[34rem] text-left text-sm">
+              <thead><tr className="border-b border-border text-xs uppercase text-muted-foreground"><th className="py-3 pr-3 font-semibold sm:pr-4">Method</th><th className="py-3 pr-3 font-semibold sm:pr-4">Proposed path</th><th className="py-3 font-semibold">Intent in draft</th></tr></thead>
+              <tbody>{group.items.map(([method, path, intent]) => <tr key={path} className="border-b border-border last:border-0"><td className="py-3 pr-3 text-xs font-semibold text-primary sm:pr-4">{method}</td><td className="break-all py-3 pr-3 text-xs text-foreground sm:pr-4">{path}</td><td className="py-3 text-muted-foreground">{intent}</td></tr>)}</tbody>
             </table>
           </div>
         </DocSection>

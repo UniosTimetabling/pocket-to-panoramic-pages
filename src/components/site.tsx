@@ -185,4 +185,4 @@ export function ContactBand({ title }: { title: string }) {
   return <section className="bg-primary text-primary-foreground"><div className="mx-auto flex max-w-7xl flex-col gap-6 px-5 py-12 sm:py-14 md:flex-row md:items-center md:justify-between md:px-8"><h2 className="display-title max-w-2xl text-2xl sm:text-3xl md:text-4xl">{title}</h2><Button asChild variant="secondary" size="lg" className="h-12 w-full shrink-0 rounded-sm px-6 sm:w-fit"><Link to="/contact">Get in touch <ArrowRight /></Link></Button></div></section>;
 }
 
-import cooperativePhoto from "@/assets/dravtech-cooperative.jpg";
+import cooperativePhoto from "@/assets/dravtech-cooperative.jpg.asset.json";
