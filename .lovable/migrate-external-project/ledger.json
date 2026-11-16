@@ -5,8 +5,8 @@
       "capability": "application code and pages",
       "source": "dravtech_fintech.zip",
       "outcome": "migrate",
-      "status": "in_progress",
-      "next_action": "Port the existing DravTech pages and adapt their layouts for all screen sizes."
+      "status": "migrated",
+      "next_action": "Verify the existing DravTech pages and their responsive layouts."
     },
     {
       "capability": "database schema and records",
