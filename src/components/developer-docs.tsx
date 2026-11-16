@@ -41,14 +41,14 @@ function DocsFrame({
         </div>
 
         <div className="grid min-w-0 gap-7 sm:gap-10 lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-16">
-          <nav aria-label="Developer documentation" className="flex min-w-0 gap-2 overflow-x-auto border-b border-border pb-3 lg:sticky lg:top-24 lg:block lg:h-fit lg:overflow-visible lg:border-b-0 lg:border-r lg:pb-0 lg:pr-6">
+          <nav aria-label="Developer documentation" className="grid min-w-0 grid-cols-2 gap-1 border-b border-border pb-3 sm:grid-cols-4 sm:gap-2 lg:sticky lg:top-24 lg:block lg:h-fit lg:border-b-0 lg:border-r lg:pb-0 lg:pr-6">
             <p className="mb-3 hidden text-xs font-semibold uppercase text-muted-foreground lg:block">Documentation</p>
             {docsNavigation.map((item) => (
               <Link
                 key={item.to}
                 to={item.to}
                 aria-current={current === item.title ? "page" : undefined}
-                className="docs-sidebar-link shrink-0 px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground lg:mb-1 lg:block"
+                className="docs-sidebar-link min-w-0 break-words px-2 py-2 text-xs text-muted-foreground transition-colors hover:text-foreground sm:px-3 sm:text-sm lg:mb-1 lg:block"
               >
                 {item.title}
               </Link>
@@ -177,9 +177,9 @@ export function ApiReferencePage() {
       {endpointGroups.map((group) => (
         <DocSection key={group.title} title={group.title}>
           <div className="max-w-full overflow-x-auto border-y border-border">
-            <table className="w-full min-w-[34rem] text-left text-sm">
+            <table className="api-table w-full min-w-[34rem] text-left text-sm">
               <thead><tr className="border-b border-border text-xs uppercase text-muted-foreground"><th className="py-3 pr-3 font-semibold sm:pr-4">Method</th><th className="py-3 pr-3 font-semibold sm:pr-4">Proposed path</th><th className="py-3 font-semibold">Intent in draft</th></tr></thead>
-              <tbody>{group.items.map(([method, path, intent]) => <tr key={path} className="border-b border-border last:border-0"><td className="py-3 pr-3 text-xs font-semibold text-primary sm:pr-4">{method}</td><td className="break-all py-3 pr-3 text-xs text-foreground sm:pr-4">{path}</td><td className="py-3 text-muted-foreground">{intent}</td></tr>)}</tbody>
+              <tbody>{group.items.map(([method, path, intent]) => <tr key={path} className="border-b border-border last:border-0"><td data-label="Method" className="py-3 pr-3 text-xs font-semibold text-primary sm:pr-4">{method}</td><td data-label="Proposed path" className="break-all py-3 pr-3 text-xs text-foreground sm:pr-4">{path}</td><td data-label="Intent in draft" className="py-3 text-muted-foreground">{intent}</td></tr>)}</tbody>
             </table>
           </div>
         </DocSection>
