@@ -1,0 +1,54 @@
+{
+  "source": "code archive",
+  "capabilities": [
+    {
+      "capability": "application code and pages",
+      "source": "dravtech_fintech.zip",
+      "outcome": "migrate",
+      "status": "in_progress",
+      "next_action": "Port the existing DravTech pages and adapt their layouts for all screen sizes."
+    },
+    {
+      "capability": "database schema and records",
+      "source": "none detected in archive",
+      "outcome": "not_present",
+      "status": "verified",
+      "next_action": "None; this archive contains no database schema or record exports."
+    },
+    {
+      "capability": "authentication and authorization",
+      "source": "none detected in archive",
+      "outcome": "not_present",
+      "status": "verified",
+      "next_action": "None; no sign-in or role system was detected."
+    },
+    {
+      "capability": "external providers and public integrations",
+      "source": "none detected in archive",
+      "outcome": "not_present",
+      "status": "verified",
+      "next_action": "None detected in application source."
+    },
+    {
+      "capability": "uploaded media",
+      "source": "dravtech_fintech.zip",
+      "outcome": "preserve",
+      "status": "pending",
+      "next_action": "Preserve the existing cooperative finance image and verify it displays."
+    },
+    {
+      "capability": "responsive behavior",
+      "source": "user request",
+      "outcome": "implement",
+      "status": "pending",
+      "next_action": "Check and correct the pages at phone, tablet, and desktop widths."
+    },
+    {
+      "capability": "verification",
+      "source": "target preview",
+      "outcome": "verify",
+      "status": "pending",
+      "next_action": "Check the live preview at representative viewport sizes and run routing tests."
+    }
+  ]
+}
