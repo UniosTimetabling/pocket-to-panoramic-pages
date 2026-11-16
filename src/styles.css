@@ -271,8 +271,8 @@
 @keyframes orbit-spin { to { rotate: 360deg; } }
 
 @keyframes section-arrive {
-  from { opacity: 0.76; transform: perspective(1200px) translateY(var(--section-depth, 14px)) rotateX(1deg); }
-  to { opacity: 1; transform: perspective(1200px) translateY(0) rotateX(0deg); }
+  from { opacity: 0.76; transform: translateY(var(--section-depth, 14px)); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @media (prefers-reduced-motion: reduce) {
